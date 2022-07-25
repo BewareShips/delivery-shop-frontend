@@ -1,0 +1,57 @@
+$buttonBackGround: #f9f9f9;
+$buttonBackGroundActive: #444141;
+
+.active{
+  background-color:( $buttonBackGroundActive);
+  color: rgb(224, 21, 21);
+}
+
+.categories{
+  &__list{
+    display: flex;
+
+    li{
+      background-color: $buttonBackGround;
+      color:$buttonBackGroundActive;
+      padding: 13px 20px;
+      border-radius: 30px;
+      margin-right: 10px;
+      font-weight: bold;
+      list-style: none;
+      cursor: pointer;
+      transition:  0.1 s all ease;
+      box-shadow: 0 0 40px rgba(0, 0, 0, .1) inset; 
+      &:hover {
+        background-color: darken($buttonBackGround, 10%);
+      }
+
+      &:active {
+        background-color: darken($buttonBackGround, 35%);
+      }
+      &.active {
+        background-color:( $buttonBackGroundActive);
+        color: #fff;
+      }
+      &.active:active {
+        background-color:darken($buttonBackGroundActive, 10%);
+        color: #fff;
+      }
+    }
+
+    
+  }
+  
+}
+
+@media (max-width: 1250px){
+  .categories__list{
+    flex-direction: column;
+  }
+  li{
+    width: 350px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+}
+

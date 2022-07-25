@@ -1,0 +1,40 @@
+$buttonBackGround: #d69277;
+
+
+.button{
+  display: flex;
+  align-items: center;
+  background-color:$buttonBackGround;
+  border-radius: 30px;
+  padding: 10px 20px;
+  min-width: 120px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid transparent;
+  &:hover{
+    text-decoration: none;
+    background-color: darken($buttonBackGround, 8%)
+  }
+  &:active {
+    background-color: darken($buttonBackGround, 22%);
+  }
+
+  &__delimiter{
+    width: 1px;
+    height: 25px;
+    background-color: rgba(255, 255, 255, 0.25);
+    margin-left: 14px;
+    margin-right: 14px;
+  }
+  span{
+    color:white;
+  }
+
+}
+
+.img{
+  color:white;
+  width: 25px;
+  padding-right: 5px;
+}
+
